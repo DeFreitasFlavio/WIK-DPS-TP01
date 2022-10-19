@@ -1,0 +1,4 @@
+node_modules
+.\Dockerfile
+.\Dockerfile.2
+.\docker-compose.yaml
