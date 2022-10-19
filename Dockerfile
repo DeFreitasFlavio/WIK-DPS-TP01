@@ -1,12 +1,7 @@
-FROM node:latest as builder
+FROM node:16
 WORKDIR /app
 COPY . .
 RUN npm i
-RUN useradd -m Flavio2
-USER Flavio2
-
-
-FROM node:latest as runner
-COPY --from=builder ./app/build ./build
-COPY --from=builder ./app/node_modules /node_modules
+RUN useradd -m Flavio
+USER Flavio
 CMD [ "node", "build/index.js"]
