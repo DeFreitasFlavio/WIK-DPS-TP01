@@ -7,7 +7,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/ping", (req, res) => {
-  res.send(req.headers);
+  console.log(req.hostname);
+
+  res.send(req.hostname);
 });
 
 app.get("/*", (req, res) => {
